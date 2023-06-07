@@ -1,0 +1,25 @@
+<div class="container-feeds">
+    <div class="header-feeds">
+        <div class="header__title">Añadir a tu feed</div>
+        <i class="bi bi-info-square-fill header__icon"></i>
+    </div>
+    <ng-container *ngFor="let feed of feeds">
+        <div class="feed">
+            <div class="avatar-feed">
+                <img [src]="feed.picture" alt="Avatar">
+            </div>
+            <div class="info-feed">
+                <div class="info-feed__name">{{ feed.name }}</div>
+                <div class="info-feed__profesion">{{ feed.profesion }}</div>
+            </div>
+        </div>
+        <button class="feed-button">
+            <i class="bi bi-plus-lg"></i>
+            Seguir
+        </button>
+    </ng-container>
+    <div class="footer-feeds">
+        Ver todas las recomendaciones
+        <i class="bi bi-arrow-right"></i>
+    </div>
+</div>

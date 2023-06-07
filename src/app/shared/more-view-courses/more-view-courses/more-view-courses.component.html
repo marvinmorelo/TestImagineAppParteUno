@@ -1,0 +1,18 @@
+<div class="container-feeds">
+    <div class="header-feeds">
+        <div class="header__title">Los cursos más vistos hoy</div>
+        <i class="bi bi-info-square-fill header__icon"></i>
+    </div>
+    <ol class="container-info-feed">
+        <li *ngFor="let item of items"><div class="feed">
+            <div class="info-feed">
+                <div class="info-feed__name">{{ item.title }}</div>
+                <div class="info-feed__profesion">{{ item.author }}</div>
+            </div>
+        </div></li>
+    </ol>
+    <div class="footer-feeds">
+        Ver más en LinkedIn Learning
+        <i class="bi bi-arrow-right"></i>
+    </div>
+</div>

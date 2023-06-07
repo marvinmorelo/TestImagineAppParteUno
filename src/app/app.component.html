@@ -1,0 +1,109 @@
+<app-header></app-header>
+<div class="container">
+  <app-banner></app-banner>
+  <div class="page">
+    <div class="column">
+      <div class="card">
+        <app-user-info></app-user-info>
+        <app-user-statistics
+          [statisticValue]="1325"
+          [statisticItem]="'Quien ha visto tu perfil'"
+        ></app-user-statistics>
+        <app-user-statistics
+          [statisticValue]="973"
+          [statisticItem]="'Visualizaciones de tu publicación'"
+        ></app-user-statistics>
+        <div class="divider"></div>
+        <div class="content-sidebar">
+          <p>Accede a información y herramientas exclusivas</p>
+          <div class="link-with-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="16x16" class="mercado-match" width="16" height="16" focusable="false">
+              <path d="M20 20a3.36 3.36 0 001-2.39V6.38A3.38 3.38 0 0017.62 3H6.38A3.36 3.36 0 004 4z" fill="#f8c77e"></path>
+              <path d="M4 4a3.36 3.36 0 00-1 2.38v11.24A3.38 3.38 0 006.38 21h11.24A3.36 3.36 0 0020 20z" fill="#e7a33e"></path>
+            </svg>
+            <a href="#">Probar Premium gratis</a>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="content-sidebar">
+          <div class="text-with-icon">
+            <i class="bi bi-bookmark-fill icon"></i>
+            Marcapáginas
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="page-title">Mis páginas (2)</div>
+        <div class="page-item">
+          <span><i class="bi bi-tree-fill" style="color: orange; font-size: 28px"></i></span>
+          <span class="page-item__text">
+            Imagine Apps
+            <p> Notificaciones de la ... <span>6</span></p>
+          </span>
+        </div>
+        <div class="page-item">
+          <span><i class="bi bi-tree-fill" style="color: orange; font-size: 28px"></i></span>
+          <span class="page-item__text">
+            Imagine Apps
+            <p>Notificaciones de la ... <span>6</span></p>
+          </span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="page-title">Recientes</div>
+        <div class="page-item page-item--hash">
+          <span><i class="bi bi-hash"></i></span>
+          <span class="page-item__text">Mentores SUM</span>
+        </div>
+        <div class="page-item page-item--hash">
+          <span><i class="bi bi-hash"></i></span>
+          <span class="page-item__text">Networking San Carlos</span>
+        </div>
+        <div class="page-item page-item--hash">
+          <span><i class="bi bi-hash "></i></span>
+          <span class="page-item__text">Latam Fintech Insights</span>
+        </div>
+        <div class="page-item page-item--hash">
+          <span><i class="bi bi-hash"></i></span>
+          <span class="page-item__text">Negocios</span>
+        </div>
+        <div class="page-item page-item--hash">
+          <span><i class="bi bi-hash"></i></span>
+          <span class="page-item__text">Emprendedores</span>
+        </div>
+      </div>
+    </div>
+    <div class="column column--large">
+      <div class="card card--publications">
+        <app-create-publications></app-create-publications>
+      </div>
+      <div class="sortingBar">
+        <div class="sortingBar__line"></div>
+        <span class="sortingBar__text">Ordenar por: </span>
+        <select class="sortingBar__select" (change)="sortPublications($event)">
+          <option value="asc">Ordenar Ascendente</option>
+          <option value="desc">Ordenar Descendente</option>
+        </select>
+      </div>
+      <div class="card" *ngIf="publications$.length > 0">
+        <div *ngFor="let publication of publications$">
+          <app-publications
+            [publication]="publication"
+            [timePost]="publication.date | timeAgo"
+          ></app-publications>
+        </div>
+      </div>
+      <div class="card card--publication">
+        <app-publications></app-publications>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <app-add-feed [feeds]="feeds"></app-add-feed>
+      </div>
+      <div class="card">
+        <app-more-view-courses [items]="items"></app-more-view-courses>
+      </div>
+    </div>
+  </div>
+</div>

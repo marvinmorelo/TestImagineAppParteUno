@@ -1,0 +1,33 @@
+<div class="publications">
+  <div class="publications-info">
+    <i class="bi bi-pencil-square"></i>
+    <input
+      class="publications__input"
+      type="text"
+      placeholder="Publicaciones"
+      [(ngModel)]="publicationText"
+    />
+    <i class="bi bi-plus-lg" style="cursor: pointer;" (click)="addPublication()"></i>
+  </div>
+  <div class="publications__icon-row">
+    <div class="publications__icon">
+      <i class="bi bi-image-fill icon" style="color: #378fe9"></i
+      ><span>Foto</span>
+    </div>
+    <div class="publications__icon">
+      <i class="bi bi-youtube icon" style="color: #5f9b41"></i
+      ><span>Video</span>
+    </div>
+    <div class="publications__icon">
+      <i class="bi bi-calendar-date icon" style="color: #c37d16"></i
+      ><span>Evento</span>
+    </div>
+    <div class="publications__icon">
+      <i
+        class="bi bi-layout-text-window-reverse icon"
+        style="color: #e16745"
+      ></i
+      ><span>Escribir articulo</span>
+    </div>
+  </div>
+</div>

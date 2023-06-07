@@ -1,0 +1,45 @@
+<div class="publication">
+  <div class="publication-header">
+    <div class="publication-header-avatar">
+      <img src="assets/images/profile-picture.jpeg" alt="Avatar">
+    </div>
+    <div class="publication-header-info">
+      <div class="publication-header-info__author">Marvin Morelo Tapia</div>
+      <div class="publication-header-info__job-title">SR Developer</div>
+      <div class="publication-header-info__timestamp">{{ timePost }}</div>
+    </div>
+    <div class="publication-header-buttons">
+      <i class="bi bi-three-dots publication-header-buttons__icon"></i>
+      <i class="bi bi-x publication-header-buttons__icon" (click)="deletePublication(publication.id)"></i>
+    </div>
+  </div>
+  <div class="publication-content">
+    <p class="publication-content__text">{{ publication.text }}</p>
+  </div>
+  <div class="publication-content-footer">
+    <div class="publication-content-likes">
+      <i class="bi bi-hand-thumbs-up-fill publication-content-likes__icon"></i>
+      <span class="publication-content-likes__count">10</span>
+    </div>
+    <div class="publication-comments">
+      <span class="publication-comments__count">5</span>
+      <span class="publication-comments__label">Comentarios</span>
+    </div>
+  </div>
+  <div class="publication-footer">
+    <button class="publication-footer-action">
+      <i class="bi bi-hand-thumbs-up publication-footer-action__icon"></i>
+     <span class="publication-footer-action__label">Me Gusta</span> 
+    </button>
+    <button class="publication-footer-action">
+      <i class="bi bi-chat-left-text publication-footer-action__icon"></i>
+     <span class="publication-footer-action__label">Comentar</span> 
+    </button>
+    <button class="publication-footer-action">
+      <i class="bi bi-share-fill publication-footer-action__icon"></i>
+     <span class="publication-footer-action__label">Compartir</span> 
+    </button>
+  </div>
+</div>
+  
+  

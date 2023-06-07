@@ -1,0 +1,46 @@
+.publications {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+  }
+  
+  .publications-info {
+    display: flex;
+    align-items: center;
+    // border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #00000099;
+    border-radius: 20px;
+  }
+  
+  .publications__input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+  }
+  
+  .publications__icon-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .publications__icon {
+    display: flex;
+    flex: 1;
+    height: 60px;
+    align-items: center;
+    font-size: 14px;
+    &:last-child {
+      min-width: 140px;
+    }
+  }
+  
+  .icon {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  

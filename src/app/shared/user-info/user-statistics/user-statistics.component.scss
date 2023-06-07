@@ -1,0 +1,21 @@
+.profile-stats {
+    margin: 10px;
+  }
+  
+  .profile-stats__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profile-stats__count {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0A66C2;
+  }
+  
+  .profile-stats__label {
+    font-size: 13px;
+    color: #00000099;
+  }
+  
