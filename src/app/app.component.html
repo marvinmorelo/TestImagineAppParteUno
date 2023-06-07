@@ -79,10 +79,10 @@
       </div>
       <div class="sortingBar">
         <div class="sortingBar__line"></div>
-        <span class="sortingBar__text">Ordenar por: </span>
+        <span class="sortingBar__text">Ordenar: </span>
         <select class="sortingBar__select" (change)="sortPublications($event)">
-          <option value="asc">Ordenar Ascendente</option>
-          <option value="desc">Ordenar Descendente</option>
+          <option value="asc">Ascendente</option>
+          <option value="desc">Descendente</option>
         </select>
       </div>
       <div class="card" *ngIf="publications$.length > 0">
