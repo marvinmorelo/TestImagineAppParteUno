@@ -22,13 +22,14 @@
   min-height: fit-content;
   height: fit-content;
   border-radius: 10px;
-  background-color: #fff;
   margin-bottom: 10px;
   padding: 12px 0;
   &--publications {
+    background-color: #fff;
     padding: 0;
   }
   &--publication {
+    background-color: #fff;
     border: 1px solid #eee;
   }
 }
@@ -58,7 +59,7 @@
     align-items: center;
     justify-content: space-between;
     span {
-      color: #0A66C2;
+      color: #0a66c2;
     }
   }
   &--hash {
@@ -84,7 +85,14 @@
   &__line {
     height: 20px;
     flex-grow: 1;
-    background-image: linear-gradient(to bottom, transparent 45%, #ddd 45%, #ddd 55%, transparent 55%, transparent 100%);
+    background-image: linear-gradient(
+      to bottom,
+      transparent 45%,
+      #ddd 45%,
+      #ddd 55%,
+      transparent 55%,
+      transparent 100%
+    );
   }
   &__text {
     font-size: 13px;
@@ -116,7 +124,8 @@
   }
 }
 
-.link-with-icon, .text-with-icon {
+.link-with-icon,
+.text-with-icon {
   display: flex;
   gap: 5px;
   align-items: center;
