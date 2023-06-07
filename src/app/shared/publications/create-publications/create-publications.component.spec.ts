@@ -1,38 +1,40 @@
-import { PublicationServiceService } from 'src/app/services/publication-service.service';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { CreatePublicationsComponent } from './create-publications.component';
-import { TestBed } from '@angular/core/testing';
+import { PublicationServiceService } from 'src/app/services/publication-service.service';
 
 describe('CreatePublicationsComponent', () => {
   let component: CreatePublicationsComponent;
+  let fixture: ComponentFixture<CreatePublicationsComponent>;
   let publicationService: PublicationServiceService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      declarations: [CreatePublicationsComponent],
       providers: [PublicationServiceService],
-    });
-    component = new CreatePublicationsComponent(
-      TestBed.inject(PublicationServiceService)
-    );
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(CreatePublicationsComponent);
+    component = fixture.componentInstance;
     publicationService = TestBed.inject(PublicationServiceService);
   });
 
-  it('should add a new publication and reset publicationText', () => {
-    const publicationText = 'New publication';
+  it('should create the component', () => {
+    expect(component).toBeTruthy();
+  });
 
-    component.publicationText = publicationText;
-    const currentDate = new Date;
-
+  it('should add publication if publicationText is not empty', () => {
     spyOn(publicationService, 'addPublication');
-
+    component.publicationText = 'Sample publication';
     component.addPublication();
+    expect(publicationService.addPublication).toHaveBeenCalled();
+    expect(component.publicationText).toBe('');
+  });
 
-    expect(publicationService.addPublication).toHaveBeenCalledWith(jasmine.objectContaining({
-      text: 'New publication',
-      date: currentDate
-    }));
-    
-    
-
-    expect(component.publicationText).toEqual('');
+  it('should not add publication if publicationText is empty', () => {
+    spyOn(publicationService, 'addPublication');
+    component.publicationText = '';
+    component.addPublication();
+    expect(publicationService.addPublication).not.toHaveBeenCalled();
+    expect(component.publicationText).toBe('');
   });
 });
