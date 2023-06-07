@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
     {
       picture: 'assets/avatars/pexels-photo-415829.webp',
       name: 'Edna Odette González Vázques',
-      profesion: 'Directyora editorial en EnergíaHoy',
+      profesion: 'Directora editorial en EnergíaHoy',
     },
     {
       picture: 'assets/avatars/espectador.png',
